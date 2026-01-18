@@ -1,0 +1,13 @@
+[Unit]
+Description=Bot1 Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/srv/bot1/app
+ExecStart=/srv/bot1/venv/bin/python main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
