@@ -8,6 +8,12 @@ APP_DIR="$(pwd)"               # Script ishlayotgan papka = repo root
 BRANCH="main"                  # Git branch
 PYTHON="$APP_DIR/venv/bin/python"  # Virtualenv python
 
+# --- Virtualenv yaratish (agar mavjud bo'lmasa) ---
+if [ ! -d "$APP_DIR/venv" ]; then
+    echo "🌿 Virtualenv topilmadi, yaratilmoqda..."
+    python3 -m venv "$APP_DIR/venv"
+fi
+
 # --- DEPLOY START ---
 echo "🚀 Deploy boshlanmoqda: $SERVICE_NAME"
 echo "📁 Papka: $APP_DIR"
