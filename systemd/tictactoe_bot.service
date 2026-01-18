@@ -1,12 +1,12 @@
 [Unit]
-Description=Bot1 Telegram Bot
+Description=Tic Tac Toe Telegram Bot
 After=network.target
 
 [Service]
 Type=simple
 User=ubuntu
-WorkingDirectory=/srv/bot1/app
-ExecStart=/srv/bot1/venv/bin/python main.py
+WorkingDirectory=/home/ubuntu/behzod/github/tictactoe_bot/app
+ExecStart=/home/ubuntu/behzod/github/tictactoe_bot/venv/bin/python main.py
 Restart=always
 
 [Install]
